@@ -1,7 +1,7 @@
-from django.urls import path
-
+from django.urls import include, path
 from . import views
-
+from django.contrib import admin
+from django.views.generic.base import RedirectView
 
 app_name = 'polls'
 urlpatterns = [
@@ -21,3 +21,4 @@ urlpatterns = [
     # ex: /polls/5/vote/
     path('<int:question_id>/vote/', views.vote, name='vote'),
 ]
+#
