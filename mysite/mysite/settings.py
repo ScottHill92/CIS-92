@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = [ "https://cis-92-vghnsd47la-uc.a.run.app" ]
+CSRF_TRUSTED_ORIGINS = [ "https://*.run.app", 'https://*.cloudshell.dev' ]
 
 # Application definition
 
@@ -125,4 +125,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://*.cloudshell.dev']
