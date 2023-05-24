@@ -8,8 +8,10 @@ spec:
   containers:
   - name: httpd
     image: ghcr.io/scotthill92/cis-92:milestone-4.6
+    env:
+    - name: SECRET_KEY
+      value: "kjdgnfeknfvkdnvfmglevn "
+    - name: PORT
+      value: "80"
     ports:
     - containerPort: 80
-    env:
-      - name: SECRET_KEY
-        value: "areallygoodandsecurekeythatnoonewilleverguesssurelyinmylifeimeanreallyhowfarcanyougoandthinkaboutwhatthisnonsenseisgoingtobelikeitsalmostlikeshuufflingadeckofcardshowmymindworkssometimes"
