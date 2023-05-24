@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysite
+  labels:
+    function: webserver
+spec:
+  containers:
+  - name: httpd
+    image: ghcr.io/scotthill92/cis-92:milestone-4.6
+    ports:
+    - containerPort: 80
+    env:
+      - name: SECRET_KEY
+        value: "areallygoodandsecurekeythatnoonewilleverguesssurelyinmylifeimeanreallyhowfarcanyougoandthinkaboutwhatthisnonsenseisgoingtobelikeitsalmostlikeshuufflingadeckofcardshowmymindworkssometimes"
