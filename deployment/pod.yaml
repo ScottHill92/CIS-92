@@ -15,3 +15,9 @@ spec:
       value: "80"
     ports:
     - containerPort: 80
+    livenessProbe:
+      httpGet:
+        path: /polls/
+        port: 80
+      initialDelaySeconds: 30
+      periodSeconds: 30
