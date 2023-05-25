@@ -7,7 +7,7 @@ metadata:
 spec:
   containers:
   - name: httpd
-    image: ghcr.io/scotthill92/cis-92:milestone-5.1
+    image: ghcr.io/scotthill92/cis-92:milestone-5.6
     env:
     - name: SECRET_KEY
       value: "kjdgnfeknfvkdnvfmglevn "
