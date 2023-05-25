@@ -7,12 +7,22 @@ metadata:
 spec:
   containers:
   - name: httpd
-    image: ghcr.io/scotthill92/cis-92:milestone-5.5
+    image: ghcr.io/scotthill92/cis-92:milestone-5.1
     env:
     - name: SECRET_KEY
       value: "kjdgnfeknfvkdnvfmglevn "
     - name: PORT
       value: "80"
+    - name: PORT
+      value: "80"
+    - name: DB_NAME
+      value: "mysite"
+    - name: DB_USER
+      value: "postgres"
+    - name: DB_PASSWORD
+      value: "django"
+    - name: DB_HOST
+      value: "postgres"
     ports:
     - containerPort: 80
     livenessProbe:
@@ -21,3 +31,10 @@ spec:
         port: 80
       initialDelaySeconds: 30
       periodSeconds: 30
+    resources:
+      requests:
+        cpu: 250m
+        memory: 128Mi
+      limits:
+        cpu: 1000m
+        memory: 1Gi

@@ -5,9 +5,16 @@ metadata:
   labels:
     app: postgres
 spec:
+  volumes:
+  - name: db
+    persistentVolumeClaim:
+        claimName: db
   containers:
   - name: postgres
     image: docker.io/postgres:14.1
+    volumeMounts:
+    - name: db
+      mountPath: /var/lib/postgresql
     resources:
       requests:
         memory: "512Mi"
